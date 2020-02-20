@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">	
+	<head> 
+		<!-- CSS style -->
+		<link rel="stylesheet" href="styles.css">
+<script>
+		function validateForm() {
+  			var inputs = [];
+			inputs[0] = document.getElementById("firstname").value;
+			inputs[1] = document.getElementById("lastname").value;
+			inputs[2] = document.getElementById("email").value;
+
+			for (var i=0; i<inputs.length; i++)
+			{
+
+  				if (inputs[i] == "") {
+    					alert("Name must be filled out");
+   				 	return false;
+				}
+			}
+  }
+</script>
+
+
+		<title> ISM 4300 Deliverable 4 </title>
+	</head>
+	<body>
+		<h1> Customer Information </h1> 
+
+		<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+		<!-- User input --> 
+	  	First Name:<br>
+		<!-- Take user inputt -->
+	  	<input type="text" id="firstname"> <br>
+	  	Last Name: <br>
+	  	<input type="text" id="lastname"> <br>
+	  	Email: <br>
+	  	<input type="email" id="email"> <br>
+	  	<br>
+	  	<input type="submit" value="Submit">
+	</form>
+	</body>
+	 
+</html>  
